@@ -8,13 +8,8 @@ project(GB02project)
 # You can set WITH_GEANT4_UIVIS to OFF via the command line or ccmake/cmake-gui
 # to build a batch mode only executable
 #
-option(WITH_GEANT4_UIVIS "Build example with Geant4 UI and Vis drivers" ON)
-if(WITH_GEANT4_UIVIS)
-  find_package(Geant4 REQUIRED ui_all vis_all)
-else()
   find_package(Geant4 REQUIRED)
-endif()
-
+  
 #----------------------------------------------------------------------------
 # Setup Geant4 include directories and compile definitions
 #
@@ -29,7 +24,7 @@ include_directories(${PROJECT_SOURCE_DIR}/include
 #----------------------------------------------------------------------------
 # Explicit sources/headers (NO GLOB, to avoid editor temp files like .sys.*)
 #
-set(B01_SOURCES
+set(GB02project_SOURCES
   ${PROJECT_SOURCE_DIR}/src/GB02ActionInitialization.cc
   ${PROJECT_SOURCE_DIR}/src/GB02DetectorConstruction.cc
   ${PROJECT_SOURCE_DIR}/src/GB02PrimaryGeneratorAction.cc
@@ -39,7 +34,7 @@ set(B01_SOURCES
   ${PROJECT_SOURCE_DIR}/src/GB02RunAction.cc
 )
 
-set(B01_HEADERS
+set(GB02project_HEADERS
   ${PROJECT_SOURCE_DIR}/include/GB02ActionInitialization.hh
   ${PROJECT_SOURCE_DIR}/include/GB02DetectorConstruction.hh
   ${PROJECT_SOURCE_DIR}/include/GB02PrimaryGeneratorAction.hh
