@@ -52,7 +52,7 @@ set(B01_HEADERS
 #----------------------------------------------------------------------------
 # Add the executable, and link it to the Geant4 libraries
 #
-add_executable(exampleGB02 exampleGB02.cc ${sources} ${headers})
+add_executable(exampleGB02 exampleGB02.cc ${GB02project_SOURCES} ${GB02project_HEADERS})
 target_link_libraries(exampleGB02 ${Geant4_LIBRARIES} )
 
 #----------------------------------------------------------------------------
