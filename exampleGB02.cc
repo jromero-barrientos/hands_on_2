@@ -48,7 +48,7 @@ void PrintUsage()
 {
   G4cerr << " Usage: " << G4endl;
   G4cerr << " ./exampleGB02 [-m macro ] "
-         << " [-b biasing {'on','off'}]"
+        // << " [-b biasing {'on','off'}]"
          << "\n or\n ./exampleGB02 [macro.mac]" << G4endl;
 }
 }  // namespace
@@ -84,7 +84,7 @@ int main(int argc, char** argv)
     }
   }
 
-  if (onOffBiasing == "") onOffBiasing = "on";
+  if (onOffBiasing == "") onOffBiasing = "off";
 
   // Instantiate G4UIExecutive if interactive mode
   G4UIExecutive* ui = nullptr;
