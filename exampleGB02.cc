@@ -94,7 +94,7 @@ int main(int argc, char** argv)
 
   // -- Construct the run manager : MT or sequential one
   auto* runManager = G4RunManagerFactory::CreateRunManager();
-  runManager->SetNumberOfThreads(4);
+  runManager->SetNumberOfThreads(1);
 
   // -- Set mandatory initialization classes
   GB02DetectorConstruction* detector = new GB02DetectorConstruction();
