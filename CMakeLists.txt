@@ -61,6 +61,9 @@ set(GB02project_SCRIPTS
   run_10k_seedA.mac
   run_10k_seedB.mac
   run_10k_seedC.mac
+  run_100k_seedA.mac
+  run_50k_seedA.mac
+  run_30k_seedA.mac
   )
 
 foreach(_script ${GB02project_SCRIPTS})
